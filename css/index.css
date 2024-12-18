@@ -1,0 +1,179 @@
+body{
+    background-color: rgba(152, 203, 235, 1);
+}
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 5em;
+}
+#topoSmash-img{
+    height: 15em;
+    width: 35em;
+}
+#index-header{
+    display: flex;
+    justify-content: center;
+}
+#fuel-form{
+    background-color: rgba(177, 225, 254, 1)    ;
+    padding-inline: 8em;
+    padding-block: 3em;
+    border-radius: 15px;;
+    text-align: center;
+}
+#fuel-form input{
+    background-color: rgba(168, 235, 248, 1);
+    border-radius: 10px;
+    margin: 0.5em;
+}
+input::placeholder{
+    text-align: center;
+}
+#fuel-form button{
+    margin-top: 1.5em;
+    background-color: rgba(168, 235, 248, 1);
+    border-radius: 10px;
+}
+/*---------------- Página de instrucciones ------------*/
+#instrucciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border-radius: 15px;
+    text-align: center;
+}
+#instrucciones-article{
+    background-color: rgba(177, 225, 254, 1);
+    /* padding-inline: 8em;
+    padding-block: 3em; */
+    border-radius: 15px;
+    margin: 2em;
+    padding: 2em;
+    
+}
+#instrucciones-article button, #informacion button{
+    margin-top: 1.5em;
+    background-color: rgb(131, 211, 227);
+    border-radius: 10px;
+}
+#instrucciones-article button.presionar {
+    background-color: #19334f;
+    transform: scale(0.95);
+}
+/*------------------PAGINA DEL JUEGO--------------------- */
+#jugar{
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    height: 6rem;
+    width: 12rem;
+    margin-top: 5em;
+    margin-left: 10em;
+}
+.topo{
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0.5rem;    
+    opacity: 0;
+    
+}
+#juego{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border-radius: 15px;
+    /* text-align: center; */
+}
+.fila{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.divTopo{
+    background-color: rgb(205, 172, 133);
+    opacity: 1; 
+    border-radius: 0.5em;
+    margin: 0.5rem;  
+}
+#informacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2em;
+}
+.contenedor-juego{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(177, 225, 254, 1);
+    border-radius: 15px;
+    padding: 1em;
+}
+.informacion-componente{
+    background-color:  rgba(152, 203, 235, 1);
+    border-radius: 0.5rem;
+    margin: 5px;
+}
+.informacion-componente h2, h3{
+    margin: 1rem;
+}
+/* ----------------animacion raton----------- */
+@keyframes rotarTopo {
+    0% {
+        transform: rotate(0deg); /* Posición original */
+    }
+    15% {
+        transform: rotate(45deg); /* Gira 45 grados */
+    }
+    30% {
+        transform: rotate(90deg); /* Vuelve a la posición original */
+    }
+    45%{
+        transform: rotate(135deg);
+    }
+    60%{
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(225deg); /* Posición original */
+    }
+    90% {
+        transform: rotate(260deg); /* Gira 45 grados */
+    }
+    100% {
+        transform: rotate(360deg); /* Vuelve a la posición original */
+    }
+}
+.rotarTopo{
+    animation-name: rotarTopo;
+    animation-duration: 3s;
+}
+.sacudirTopo{
+    animation-name: sacudirTopo;
+    animation-duration: 3s;
+}
+@keyframes sacudirTopo {
+    0% {
+        transform: rotate(0deg); /* Posición original */
+    }
+    20% {
+        transform: rotate(45deg); /* Gira 45 grados */
+    }
+    40% {
+        transform: rotate(-45deg); /* Vuelve a la posición original */
+    }
+    60%{
+        transform: rotate(45deg);
+    }
+    80%{
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg); /* Posición original */
+    }
+}
